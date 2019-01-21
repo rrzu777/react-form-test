@@ -1,9 +1,10 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: "./src/index.js",
   output: {
-    path: path.resolve(__dirname, 'docs'),
+    path: path.resolve(__dirname, 'dist'),
     publicPath: "/",
     filename: "bundle.js"
   },
@@ -36,5 +37,13 @@ module.exports = {
   devServer: {
     contentBase: "./docs",
     historyApiFallback: true,
-  }
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+        template: __dirname + '/src/index.html',
+        filename: 'index.html',
+        inject: 'body'
+    }),
+    new webpack.optimize.UglifyJsPlugin()
+]
 };
