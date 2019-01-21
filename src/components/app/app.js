@@ -12,6 +12,7 @@ const App = ({ login, loggedUser }) => {
         email: 'test@test.com' <br />
         password: 'test', <br />
         Also you can create an account, Signup!</h3>
+debugger
     return (
         <div className={app}>
             {!login ? helpMessage : null}
