@@ -1,20 +1,21 @@
 import React from 'react';
 
-import { inputContainer, invalid, validationError } from './input.scss';
+import { inputContainer, validationError } from './input.scss';
 
-const Input = ({ label, changed, inputConfig, value, shouldValidate, touched}) => {
-  let validationMessage = null;
+const Input = ({ label, changed, inputConfig, invalid, value, shouldValidate, touched}) => {
+    let validationMessage = null;
 
-  if (invalid && shouldValidate && touched) {
-    validationMessage = (<span className={validationError}>Please enter a valid Value</span>)
-  }
-   return (
-    <div className={inputContainer}>
-      <label>{label}</label>
-      <input onChange={changed} {...inputConfig} value={value}/>
-      {validationMessage}
-    </div>
-  );
+    if (invalid && shouldValidate && touched) {
+      validationMessage = (<span className={validationError}>Please enter a valid Value</span>)
+    }
+
+    return (
+      <div className={inputContainer}>
+        <label>{label}</label>
+        <input onChange={changed} {...inputConfig} value={value}/>
+        {validationMessage}
+      </div>
+    );
 };
 
 export default Input;
