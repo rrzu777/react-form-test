@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { Link, Route, NavLink, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 import Login from '../login'
 import Home from '../home'
@@ -19,6 +19,7 @@ const App = ({ login, loggedUser }) => {
                 <Switch>
                     <Route path='/' exact component={Login} />
                     <Route path='/home' render={() => <Home user={loggedUser.hasOwnProperty('email') ? loggedUser.email : ''} />} />
+                    <Route component={() => (<div> 404 Not found </div>)} />
                 </Switch>
             </div>
         </div>

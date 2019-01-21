@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { updateObject, checkValidity } from '../../utils'
 import { login } from '../../store'
@@ -120,7 +119,6 @@ class Login extends Component {
                 invalid={!input.config.valid}
             />)
         );
-                console.log(this.state)
         return (
           <div className={formContainer}>
                 <form onSubmit={this.loginHandler}>
