@@ -1,0 +1,36 @@
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { Link, Route, NavLink, Switch } from 'react-router-dom';
+
+import Login from '../login'
+import Home from '../home'
+import { app, help } from './app.scss'
+
+const App = ({ login, loggedUser }) => {
+    const helpMessage = <h3 className={help}>To signin in the test, please use: <br />
+        email: 'test@test.com' <br />
+        password: 'test', <br />
+        Also you can create an account, Signup!</h3>
+    return (
+        <div className={app}>
+            {!login ? helpMessage : null}
+            <div>
+                <Switch>
+                    <Route path='/' exact component={Login} />
+                    <Route path='/home' render={() => <Home user={loggedUser.hasOwnProperty('email') ? loggedUser.email : ''} />} />
+                </Switch>
+            </div>
+        </div>
+    );
+};
+
+
+App.propTypes = {
+    login: PropTypes.bool.isRequired,
+    loggedUser: PropTypes.object
+}
+
+const mapStateToProps = ({ login, loggedUser }) => ({ login, loggedUser })
+
+export default connect(mapStateToProps)(App);

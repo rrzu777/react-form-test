@@ -1,0 +1,15 @@
+.app {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    height: 100vh;
+    background-image: linear-gradient(darkcyan, skyblue);
+    box-shadow: inset 0 0 100px hsla(0,0%,0%,.3);
+}
+
+.help {
+    font-size: 24px;
+    font-weight: 700;
+    color:white;
+    text-align: center;
+}

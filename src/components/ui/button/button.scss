@@ -1,0 +1,34 @@
+.button {
+  background-color: darkcyan;
+  border: 1px solid darkcyan;
+  border-radius: 4px;
+  padding: .5em 1em;
+  letter-spacing: 1px;
+  transition: all 150ms linear;
+  color: white;
+    
+  &:hover {
+    background-color: rgba(darkcyan, .6);
+    box-shadow: 0 0.5em 0.5em -0.4em adjust-hue(darkcyan, 45deg);
+    transform: translateY(-0.25em);
+  }
+
+  &:disabled {
+    background-color: rgba(darkcyan, .1);
+    color: #999999;
+    pointer-events: none;
+  }
+
+  :first-of-type {
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  .signup {
+    color: #5C9210;
+  }
+
+  .signin {
+    color: skyblue;
+  }
+}

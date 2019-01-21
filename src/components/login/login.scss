@@ -1,0 +1,19 @@
+.formContainer {
+    display: flex;
+    margin: auto;
+    background-color: white;
+    width: 300px;
+    padding: 3em 2em;
+    border-radius: .5em;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
+
+    form {
+        width: 100%;
+    }
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1em;
+}

@@ -1,0 +1,20 @@
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    font-size: 28px;
+    text-align: center;
+
+    button {
+        align-self: center;
+        margin-top: 1em;
+        background-color: orangered;
+        color: white;
+
+        &:hover,
+        &:focus {
+            background-color: darkorange;
+        }
+    }
+}

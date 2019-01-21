@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500');
+:global {
+    * {
+        box-sizing: border-box;
+    }
+    html, body {
+        height: 100%;
+    }
+    
+    body {
+        padding: 0;
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+        overflow: hidden;
+        background-color: darkcyan;
+    }
+}
