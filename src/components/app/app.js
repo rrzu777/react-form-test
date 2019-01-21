@@ -18,7 +18,7 @@ const App = ({ login, loggedUser }) => {
             <div>
                 <Switch>
                     <Route path={process.env.PUBLIC_URL + '/'} exact component={Login} />
-                    <Route path='/home' render={() => <Home user={loggedUser.hasOwnProperty('email') ? loggedUser.email : ''} />} />
+                    <Route path={process.env.PUBLIC_URL + '/home'} render={() => <Home user={loggedUser.hasOwnProperty('email') ? loggedUser.email : ''} />} />
                     <Route component={() => (<div> 404 Not found </div>)} />
                 </Switch>
             </div>
