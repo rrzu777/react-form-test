@@ -7,7 +7,6 @@ import { login } from '../../store'
 import { Input } from '../ui';
 import { Button } from '../ui';
 import { formContainer, buttonContainer } from './login.scss'
-// import classes from './Login.css';
 
 class Login extends Component {
     constructor(props) {
