@@ -10,7 +10,7 @@ import App from "./components/app";
 import './base.scss';
 
 const store = createStore(reducer);
-console.log(process.env.PUBLIC_URL)
+
 const app = (
     <Provider store={store}>
         <HashRouter basename={process.env.PUBLIC_URL}>
