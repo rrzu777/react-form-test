@@ -3,18 +3,15 @@ import React from 'react';
 import { inputContainer, invalid, validationError } from './input.scss';
 
 const Input = ({ label, changed, inputConfig, value, shouldValidate, touched}) => {
-  let invalidClass = null;
   let validationMessage = null;
-debugger
+
   if (invalid && shouldValidate && touched) {
-    invalidClass = invalid;
-    console.log('invalidClass', invalidClass)
     validationMessage = (<span className={validationError}>Please enter a valid Value</span>)
   }
    return (
     <div className={inputContainer}>
       <label>{label}</label>
-      <input className={invalidClass} onChange={changed} {...inputConfig} value={value}/>
+      <input onChange={changed} {...inputConfig} value={value}/>
       {validationMessage}
     </div>
   );
